@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="demo"></p>
+  </body>
+  <script type="text/javascript">
+    document.addEventListener("mousemove", func);
+    function func(){
+      document.getElementById('demo').innerHTML = "ClientX= " + event.clientX +
+       " & ClientY= " + event.clientY;
+    }
+  </script>
+</html>

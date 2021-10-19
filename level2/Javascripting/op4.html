@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .bord{
+        background-color:#D94A38;width:120px;height:20px;padding:40px;margin:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div onclick="bold(this)" id="first"  class="bord">
+      <p>Albert Hoffman</p>
+    </div>
+    <div onclick="bold(this)" id="second"  class="bord">
+      <p>Albert Hoffman</p>
+    </div>
+    <div onclick="bold(this)" id="third" class="bord">
+      <p>Albert Hoffman</p>
+    </div>
+    <div onclick="bold(this)" id="fourth" class="bord">
+      <p>Albert Hoffman</p>
+    </div>
+    <div onclick="bold(this)" id="fifth" class="bord">
+      <p>Albert Hoffman</p>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    var stylus;
+    function bold(obj){
+      if (stylus == "normal") {
+        stylus = "bold";
+      } else if (stylus == "bold") {
+        stylus = "normal";
+      } else {
+        stylus = "normal";
+      }
+      obj.style.fontWeight = stylus;
+    }
+  </script>
+</html>

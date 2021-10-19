@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var zin = "applicatie ontwikkelaar";
+      var len = zin.length;
+      var plek = zin.indexOf('ontwikkelaar');
+      var sli = zin.slice(14,17);
+      var rep = zin.replace('ontwikkelaar', 'programmeur');
+      var hoofdlet = zin.toUpperCase();
+
+    </script>
+  </head>
+  <body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <p id="e"></p>
+    <p id="f"></p>
+
+    <script type="text/javascript">
+      document.getElementById('a').innerHTML = len;
+      document.getElementById('b').innerHTML = plek;
+      document.getElementById('d').innerHTML = sli;
+      document.getElementById('e').innerHTML = rep;
+      document.getElementById('f').innerHTML = hoofdlet;
+
+    </script>
+  </body>
+</html>

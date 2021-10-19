@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <div onclick="names()" id="container" style="background-color:#D94A38;width:90%;height:20px;padding:40px;">
+    </div>
+    <script type="text/javascript">
+      var txt = [];
+      function names(){
+        var name = prompt("Enter your name :" , "")
+        txt.push(name + " ");
+        document.getElementById('container').innerHTML = txt;
+
+
+      }
+
+    </script>
+  </body>
+</html>

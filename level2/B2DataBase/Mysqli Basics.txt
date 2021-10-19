@@ -1,0 +1,37 @@
+                         basic SQL methods
+1-Connecting :
+      $db = new mysqli('localhost', 'user', 'pass', 'demo');
+
+      if($db->connect_errno > 0){
+          die('Unable to connect to database [' . $db->connect_error . ']');
+      }
+
+2-Querying :
+      $sql = <<<SQL
+      SELECT *
+      FROM `users`
+      WHERE `live` = 1
+      SQL;
+
+      if(!$result = $db->query($sql)){
+      die('There was an error running the query [' . $db->error . ']');
+      }
+
+3-Number of returned rows :
+      echo 'Total results: ' . $result->num_rows;
+
+4-Number of affected rows :
+      echo 'Total rows updated: ' . $db->affected_rows;
+
+5-Free result :
+      $result->free();
+
+This will free up some system resources,
+and is a good practice to get in the habit of doing.
+
+6-Escaping characters :
+      $db->real_escape_string('This is an unescaped "string"');
+  OR  $db->escape_string('This is an unescape "string"');
+
+7-Finished?? :
+      $db->close();

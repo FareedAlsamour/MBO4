@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .inline{display:inline-block; vertical-align:top; border: 2px solid black; padding:20px;}
+    </style>
+    <script type="text/javascript">
+      var a = 3;
+      var b = 4;
+      var c = 5;
+    </script>
+  </head>
+  <body>
+    <div class="inline">
+      <p>Optelling van a,b en c is:</p>
+      <p id="result1">****</p>
+      <button type="button" name="button" onclick="document.getElementById('result1').innerHTML = a + b + c;">Result!</button>
+    </div>
+    <div class="inline">
+      <p>Optelling van a en c min b is:</p>
+      <p id="result2">****</p>
+      <button type="button" name="button" onclick="document.getElementById('result2').innerHTML = a + c - b;">Result!</button>
+    </div>
+    <div class="inline">
+      <p>Restgetal van c door a is:</p>
+      <p id="result3">****</p>
+      <button type="button" name="button" onclick="document.getElementById('result3').innerHTML = c % a;">Result!</button>
+    </div>
+    <div class="inline">
+      <p> A van c aftrekken en dan vermenigvuldigen met b is:</p>
+      <p id="result4">****</p>
+      <button type="button" name="button" onclick="document.getElementById('result4').innerHTML = (c - a) * b;">Result!</button>
+    </div>
+    <div class="inline">
+      <p>Optelling van b en c en dan delen door a is:</p>
+      <p id="result5">****</p>
+      <button type="button" name="button" onclick="document.getElementById('result5').innerHTML = (b + c) / a;">Result!</button>
+    </div>
+
+  </body>
+</html>

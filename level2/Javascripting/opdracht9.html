@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var namen = ["Zoe","Bram", "Clarissa", "Isa", "Gerrie"];
+      var i = 0;
+      var len = namen.length;
+      while (i < len) {
+        console.log(namen[i]);
+        i++;
+      }
+      for (var i = 0; i < namen.length; i++) {
+        document.write(namen[i]);
+        document.write("\n");
+      }
+
+    </script>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="len"></p>
+    <p id="naam"></p>
+    <p id="hash"></p>
+    <p id="sort"></p>
+
+  <script type="text/javascript">
+    document.getElementById("demo").innerHTML = namen.toString();
+    document.getElementById("len").innerHTML = namen.length;
+    namen.push("Fareed");
+    document.getElementById("naam").innerHTML = namen.toString();
+    document.getElementById("hash").innerHTML = namen.join("#");
+    document.getElementById("sort").innerHTML = namen.sort();
+
+
+  </script>
+
+
+  </body>
+</html>

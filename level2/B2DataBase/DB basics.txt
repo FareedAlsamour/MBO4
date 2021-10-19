@@ -1,0 +1,19 @@
+				               ADDING SONGS
+					            	
+A1-INSERT INTO songs (`id`,`artist`,`title`) VALUES (null,"Isaac Chambers","Confidence of Equals")
+A2-INSERT INTO songs (`artist`,`title`) VALUES ("Isaac Chambers","Confidence of Equals")
+A3-INSERT INTO songs (`artist`,`title`) VALUES ("Russ", "Pull the trigger"),
+					      ("INZO","Overthinker"),
+                                              ("Opus", "Life is life");
+
+B1-UPDATE songs SET `title` = "Changes"  WHERE `artist` = "Isaac Chambers";
+B2-UPDATE songs SET `artist` = "Odd Squad Family", `title` = "Smoke My Pain" WHERE title = "Goodbye";
+B3-UPDATE songs SET `title` = "Goodbye" WHERE `title` = "Pull the trigger";
+B4-UPDATE songs SET `title` = "Goodbye" WHERE `title` = "Pull the trigger";
+
+
+C1-SELECT * FROM `songs` WHERE id = 1;
+C2-SELECT * FROM `songs` WHERE title = "Goodbye";
+C3-SELECT * FROM `songs` WHERE title = "Goodbye" AND artist = "Russ";
+
+G-DELETE FROM songs WHERE artist = "Russ" OR title="Know My Name";

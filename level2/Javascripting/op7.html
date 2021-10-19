@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #demo{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="info()" id="link" type="button" name="button"></button>
+    <p>Willy Wonka</p> <br>
+    <p id="demo">DOB : November 22, 1931 & City : Burnley Lancashire</p>
+  </body>
+  <script type="text/javascript">
+    var x = document.getElementById('link').innerHTML = "Show";
+    // console.log(x);
+    function info(){
+      if (x == "Show") {
+        document.getElementById('demo').style.display = "inline";
+        x = document.getElementById('link').innerHTML = "Hide";
+      } else if (x == "Hide") {
+        document.getElementById('demo').style.display = "none";
+        x = document.getElementById('link').innerHTML = "Show";
+      }
+    }
+  </script>
+</html>

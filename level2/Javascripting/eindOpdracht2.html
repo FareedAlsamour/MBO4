@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #container{
+        width:550px;
+      }
+      .grid{
+        vertical-align:top;
+        margin:2px;
+        width:100px;
+        height:100px;
+        display:inline-block;
+        background-color: yellow;
+        font-size:75px;
+        text-align:center;
+
+      }
+    </style>
+  </head>
+  <body onkeydown="keycheck(event)">
+    <div id="container">
+
+    </div>
+
+    <script type="text/javascript">
+      for (var i = 0; i < 25; i++) {
+        document.getElementById('container').innerHTML += "<div class=\"grid\"></div>";
+      }
+      var x = document.getElementsByClassName('grid');
+      var i = 12;
+      x[i].style.backgroundColor = "black";
+
+      function keycheck(event) {
+        var x = event.key;
+        if (x == "ArrowUp") {
+          up();
+        }
+        if (x == "ArrowDown") {
+          down();
+        }
+        if (x == "ArrowLeft") {
+          left();
+        }
+        if (x == "ArrowRight") {
+          right();
+        }
+        console.log(x);
+      }
+
+      function down(){
+        if (i > -1 && i < 20) {
+          x[i].style.backgroundColor = "yellow";
+          i += 5;
+          x[i].style.backgroundColor = "black";
+        }
+
+      }
+      function up(){
+        if (i > 4 && i < 25) {
+          x[i].style.backgroundColor = "yellow";
+          i -= 5;
+          x[i].style.backgroundColor = "black";
+        }
+
+      }
+      function right(){
+        if((i > -1 && i < 4)||(i > 4 && i < 9)||(i > 9 && i < 14) ||
+         (i > 14 && i < 19) || (i > 19 && i < 24)) {
+          x[i].style.backgroundColor = "yellow";
+          i += 1;
+          x[i].style.backgroundColor = "black";
+        }
+      }
+      function left(){
+        if((i > 0 && i < 5)||(i > 5 && i < 10)||(i > 10 && i < 15) ||
+         (i > 15 && i < 20) || (i > 20 && i < 25)) {
+          x[i].style.backgroundColor = "yellow";
+          i -= 1;
+          x[i].style.backgroundColor = "black";
+        }
+      }
+    </script>
+
+  </body>
+</html>

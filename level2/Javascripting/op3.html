@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <div onmouseover="mOn(this)" onmouseout="mOff(this)" onclick="mClick()" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+      <p id="demo">Hello World!</p>
+    </div>
+
+    <script type="text/javascript">
+      var lang = "en";
+      function mOn(obj){
+        obj.style.fontStyle = "italic";
+      }
+
+      function mOff(obj){
+        obj.style.fontStyle = "normal";
+      }
+      function mClick(){
+        var text;
+        if (lang == "en") {
+          text = "Hello World";
+          lang = "nl";
+        }
+        else if (lang == "nl") {
+          text = "Hallo Wereld!";
+          lang = "en";
+        }
+        document.getElementById('demo').innerHTML = text;
+
+      }
+    </script>
+
+  </body>
+</html>

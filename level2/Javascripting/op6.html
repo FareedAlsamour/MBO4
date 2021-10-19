@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form id="frm">
+      <input type="number" name="text" value="">
+      <button onclick="timer()" type="button" name="button">Start</button>
+    </form>
+
+  </body>
+  <script type="text/javascript">
+    function timer(){
+      var x = document.forms["frm"];
+      var seconds = x.elements[0].value * 1000;
+      function message(){
+        alert("Timeout!")
+      }
+      setTimeout(message, seconds);
+    }
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Inhoud & oppervlakte :
+    <p id="full">
+    </p>
+    Plaats:
+    <p id="plaats">
+    </p>
+
+    <script type="text/javascript">
+      var huis = {inhoud:"slaapkamer, huiskamer, Kueken",oppervlakte:"54m",
+                  plaats:"Assen",soortWoning:"StudentWoning", fulldata : function(){
+                    return this.inhoud + " " + this.oppervlakte;
+                  } }
+      document.getElementById('full').innerHTML = huis.fulldata();
+      document.getElementById('plaats').innerHTML = huis.plaats;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <script type="text/javascript">
+    function myFunction(x,y,z){
+      // if (z == '-') {
+      //   return x - y;
+      // }
+      // else if (z == '+') {
+      //   return x + y;
+      // }
+      // else if (z == '*') {
+      //   return x * y;
+      // }
+      // else if (z == '/') {
+      //   return x / y;
+      // }
+      switch (z) {
+        case '-':
+          return x - y;
+          break;
+        case '+':
+          return x + y;
+          break;
+        case '*':
+          return x * y;
+          break;
+        case '/':
+          return x / y;
+          break;  
+
+      }
+    }
+  </script>
+
+  <body>
+    <p id="min">
+      ------------
+    </p>
+    <p id="plus">
+      ++++++++++++
+    </p>
+    <p id="multiply">
+      ***********
+    </p>
+    <p id="divided">
+      /////////////////
+    </p>
+    <script type="text/javascript">
+      document.getElementById('min').innerHTML = myFunction(3,4,'-')
+      document.getElementById('plus').innerHTML = myFunction(3,4,'+')
+      document.getElementById('multiply').innerHTML = myFunction(3,4,'*')
+      document.getElementById('divided').innerHTML = myFunction(3,4,'/')
+
+    </script>
+
+  </body>
+</html>

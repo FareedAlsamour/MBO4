@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #container{
+
+        width:315px;
+        height:50%;
+        background-color:red;
+      }
+      .grid{
+        vertical-align:top;
+        margin:2px;
+        width:100px;
+        height:100px;
+        display:inline-block;
+        background-color: white;
+        font-size:75px;
+        text-align:center;
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+    </div>
+
+    <script type="text/javascript">
+      for (var i = 0; i < 9; i++) {
+        document.getElementById('container').innerHTML += "<div onclick=\"place(this)\" class=\"grid\"></div>";
+      }
+      var xo = "X";
+
+
+      function place(obj){
+        var cont = obj.innerHTML;
+        if (cont == "X" || cont == "O") {
+          return 0;
+        } else {
+          if (xo == "X") {
+            obj.innerHTML = xo;
+            xo = "O";
+
+          } else if (xo == "O") {
+            obj.innerHTML = xo;
+            xo = "X";
+        }
+
+        }
+
+
+}
+
+
+
+    </script>
+  </body>
+</html>
